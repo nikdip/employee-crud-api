@@ -1,3 +1,4 @@
+
 # Employee CRUD REST API (AWS Lambda + API Gateway + DynamoDB)
 
 This is a serverless REST API built using AWS services and Python.  
@@ -61,3 +62,7 @@ Delete employee
   "name": "Yash",
   "role": "Developer"
 }
+=======
+# employee-crud-api
+Serverless REST API for Employee Management using AWS Lambda, API Gateway, and DynamoDB with full CRUD operations in Python.
+
