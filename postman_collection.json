@@ -1,0 +1,171 @@
+{
+  "info": {
+    "_postman_id": "employee-crud-api-aws",
+    "name": "Employee CRUD API (AWS Lambda + DynamoDB)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://wpn2rljsd7.execute-api.ap-south-1.amazonaws.com/production/status",
+          "protocol": "https",
+          "host": [
+            "wpn2rljsd7",
+            "execute-api",
+            "ap-south-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "production",
+            "status"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Employees",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://wpn2rljsd7.execute-api.ap-south-1.amazonaws.com/production/employees",
+          "protocol": "https",
+          "host": [
+            "wpn2rljsd7",
+            "execute-api",
+            "ap-south-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "production",
+            "employees"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Employee By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://wpn2rljsd7.execute-api.ap-south-1.amazonaws.com/production/employee?employeeid=101",
+          "protocol": "https",
+          "host": [
+            "wpn2rljsd7",
+            "execute-api",
+            "ap-south-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "production",
+            "employee"
+          ],
+          "query": [
+            {
+              "key": "employeeid",
+              "value": "101"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employeeid\": \"104\",\n  \"full_name\": \"New User\",\n  \"job_title\": \"Intern\",\n  \"salary\": 25000\n}"
+        },
+        "url": {
+          "raw": "https://wpn2rljsd7.execute-api.ap-south-1.amazonaws.com/production/employee",
+          "protocol": "https",
+          "host": [
+            "wpn2rljsd7",
+            "execute-api",
+            "ap-south-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "production",
+            "employee"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Employee",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employeeId\": \"104\",\n  \"updateKey\": \"job_title\",\n  \"updateValue\": \"Senior Intern\"\n}"
+        },
+        "url": {
+          "raw": "https://wpn2rljsd7.execute-api.ap-south-1.amazonaws.com/production/employee",
+          "protocol": "https",
+          "host": [
+            "wpn2rljsd7",
+            "execute-api",
+            "ap-south-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "production",
+            "employee"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Employee",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employeeId\": \"104\"\n}"
+        },
+        "url": {
+          "raw": "https://wpn2rljsd7.execute-api.ap-south-1.amazonaws.com/production/employee",
+          "protocol": "https",
+          "host": [
+            "wpn2rljsd7",
+            "execute-api",
+            "ap-south-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "production",
+            "employee"
+          ]
+        }
+      }
+    }
+  ]
+}
